@@ -5,7 +5,6 @@ public class GroundMovement : MonoBehaviour
     public float speed = 5f;  // 移動スピード
     public float respawnPositionZ = 35f;  // リスポーン時のZ軸位置
     public float destroyThreshold = -20f; // 消滅するZ軸位置
-
     private Vector3 startPosition;
 
     void Start()
