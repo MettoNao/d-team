@@ -1553,6 +1553,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1843382668014693562, guid: f350e54a4097c43c1831d312365a8f1f,
         type: 3}
+      propertyPath: effect
+      value: 
+      objectReference: {fileID: 2845172740609532020, guid: d271154b6c741114480b7fd9eb669dc6,
+        type: 3}
+    - target: {fileID: 1843382668014693562, guid: f350e54a4097c43c1831d312365a8f1f,
+        type: 3}
       propertyPath: resultDisplayScore
       value: 
       objectReference: {fileID: 1408861629}

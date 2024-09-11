@@ -1,12 +1,13 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-
+using DG.Tweening;
 public class player : MonoBehaviour
 {
     [SerializeField] float speed;
     [SerializeField] float jumpPower;
     [SerializeField] float xLimit;
     [SerializeField] private ResultDisplayScore resultDisplayScore;
+    [SerializeField] private GameObject effect;
     private bool jumpTF = true;
     public int health;
     private Rigidbody rb;
@@ -59,11 +60,20 @@ public class player : MonoBehaviour
             }
         }
 
-
         if (other.gameObject.CompareTag("Enemy"))
         {
-            resultDisplayScore.ShowResult();
+            var e = Instantiate(effect);
+            e.transform.position = transform.position;
+
+            Camera.main.transform.DOShakePosition(0.5f);
+
+            Invoke("MoveResult", 3);
         }
+    }
+
+    void MoveResult()
+    {
+        resultDisplayScore.ShowResult();
     }
 
     private void OnMove(InputValue inputvalue)
