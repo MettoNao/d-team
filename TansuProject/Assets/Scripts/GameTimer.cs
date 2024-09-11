@@ -1,9 +1,11 @@
 using UnityEngine;
+using TMPro;  // TextMeshProを使用
 
 public class GameTimer : MonoBehaviour
 {
     public static GameTimer Instance { get; private set; }
 
+    public TextMeshProUGUI timerText;  // 経過時間を表示するTextMeshPro
     private float elapsedTime = 0f;
     private bool isCounting = false;
 
@@ -19,12 +21,6 @@ public class GameTimer : MonoBehaviour
         {
             Destroy(gameObject); // すでにインスタンスがある場合、削除
         }
-    }
-
-    void Start()
-    {
-        // ゲーム起動時に自動でタイマーを開始
-        StartTimer();
     }
 
     void Update()
@@ -59,7 +55,10 @@ public class GameTimer : MonoBehaviour
     // 経過秒数を小数点第二位まで表示する
     private void DisplayElapsedTime()
     {
-        float roundedTime = Mathf.Round(elapsedTime * 10f) / 10f; // 小数点第二位で四捨五入
-        Debug.Log("経過時間: " + roundedTime.ToString("F1") + "秒"); // 小数点以下2桁まで表示
+        float roundedTime = Mathf.Round(elapsedTime * 100f) / 100f; // 小数点第二位で四捨五入
+        if (timerText != null)
+        {
+            timerText.text = roundedTime.ToString("F2") + "秒"; // 小数点以下2桁まで表示
+        }
     }
 }
