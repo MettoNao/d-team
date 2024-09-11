@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Fade : MonoBehaviour
 {
-    //bool fadeIn = false;
+    bool fadeIn = false;
     bool fadeOut = false;
 
     [SerializeField] float fadeDuration = 1f;
@@ -15,25 +15,25 @@ public class Fade : MonoBehaviour
     float timer;
     void Start()
     {
-        //fadeIn = true;
+        fadeIn = true;
     }
 
     void Update()
     {
-        //if(fadeIn)
-        //{
-        //    FadeIn();
-        //}
-        if(fadeOut)
+        if (fadeIn)
+        {
+            FadeIn();
+        }
+        if (fadeOut)
         {
             FadeOut();
         }
     }
 
-    //public void ClickTitleButton()
-    //{
-    //    fadeOut = true;
-    //}
+    public void ClickTitleButton()
+    {
+        fadeOut = true;
+    }
 
     public void FadeIn()
     {
