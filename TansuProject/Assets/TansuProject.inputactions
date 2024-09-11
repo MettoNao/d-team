@@ -33,13 +33,13 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Jamp",
+                    "name": "Jump",
                     "type": "Button",
                     "id": "426cb832-c5ab-4774-b825-5ddc49de017e",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -270,7 +270,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
-                    "action": "Jamp",
+                    "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

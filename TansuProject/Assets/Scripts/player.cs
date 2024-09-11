@@ -1,26 +1,28 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.SceneManagement;
 
 public class player : MonoBehaviour
 {
     [SerializeField] float speed;
     [SerializeField] float jumpPower;
+    [SerializeField] float xLimit;
     private bool jumpTF = true;
     public int health;
     private Rigidbody rb;
     private TansuProject ip;
-    [SerializeField] float xLimit;
+    private Animator anim;
     private float x;
     private float y;
     void Start()
     {
         health = 3;
         rb = gameObject.GetComponent<Rigidbody>();
+
+        anim = GetComponent<Animator>();
+        anim.SetBool("walk", true);
+
         ip = new TansuProject();
-        ip.Player.Jamp.performed += OnJump;
+        ip.Player.Jump.performed += Jump;
         ip.Enable();
     }
 
@@ -39,12 +41,7 @@ public class player : MonoBehaviour
         currentPos.x = Mathf.Clamp(currentPos.x, -xLimit, xLimit);
         transform.position = currentPos;
     }
-    private void OnMove(InputValue inputvalue)
-    {
-        Vector2 movementVector = inputvalue.Get<Vector2>();
-        x = movementVector.x;
-        y = movementVector.y;
-    }
+
     private void FixedUpdate()
     {
         Vector3 movement = new Vector3(-x, 0, -y);
@@ -62,7 +59,14 @@ public class player : MonoBehaviour
         }
     }
 
-    private void OnJump(InputAction.CallbackContext context)
+    private void OnMove(InputValue inputvalue)
+    {
+        Vector2 movementVector = inputvalue.Get<Vector2>();
+        x = movementVector.x;
+        y = movementVector.y;
+    }
+
+    private void Jump(InputAction.CallbackContext context)
     {
         Debug.Log("Jump!!");
         if (jumpTF == false)

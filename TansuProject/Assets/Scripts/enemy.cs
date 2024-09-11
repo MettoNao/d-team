@@ -7,7 +7,7 @@ public class enemy : MonoBehaviour
     player p;
     void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
             p = other.GetComponent<player>();
             p.RemoveHP();

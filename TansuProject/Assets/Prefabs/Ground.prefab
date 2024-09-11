@@ -700,7 +700,7 @@ GameObject:
   - component: {fileID: 6412602782846534169}
   m_Layer: 0
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -748,7 +748,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 914a18a71bb484c57abfe7c996df5d90, type: 2}
+  - {fileID: 2100000, guid: 2a38e7f97b44e4c4cb7b6975a15e41bc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1097,7 +1097,7 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 1, g: 0.91286, b: 0.7877358, a: 1}
+      minColor: {r: 1, g: 1, b: 1, a: 1}
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
@@ -2184,7 +2184,7 @@ ParticleSystem:
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
-        key1: {r: 1, g: 0.7664447, b: 0.495283, a: 0}
+        key1: {r: 1, g: 1, b: 1, a: 0}
         key2: {r: 1, g: 0.53839093, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -2192,7 +2192,7 @@ ParticleSystem:
         key6: {r: 0, g: 0, b: 0, a: 0}
         key7: {r: 0, g: 0, b: 0, a: 0}
         ctime0: 771
-        ctime1: 65535
+        ctime1: 64957
         ctime2: 64571
         ctime3: 0
         ctime4: 0
