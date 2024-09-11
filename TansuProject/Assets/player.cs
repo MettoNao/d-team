@@ -23,14 +23,16 @@ public class player : MonoBehaviour
         ip.Player.Jamp.performed += OnJump;
         ip.Enable();
     }
+
     public void RemoveHP()
     {
         health--;
-        if(health==0)
+        if (health == 0)
         {
             //SceneManager.LoadScene("Result");
         }
     }
+
     private void Update()
     {
         Vector3 currentPos = transform.position;
@@ -48,9 +50,10 @@ public class player : MonoBehaviour
         Vector3 movement = new Vector3(-x, 0, -y);
         rb.AddForce(movement * speed);
     }
+
     public void OnCollisionEnter(Collision other)
     {
-        if(jumpTF==true)
+        if (jumpTF == true)
         {
             if (other.gameObject.CompareTag("Ground"))
             {
@@ -58,8 +61,10 @@ public class player : MonoBehaviour
             }
         }
     }
+
     private void OnJump(InputAction.CallbackContext context)
     {
+        Debug.Log("Jump!!");
         if (jumpTF == false)
         {
             rb.AddForce(Vector3.up * jumpPower, ForceMode.Impulse);
