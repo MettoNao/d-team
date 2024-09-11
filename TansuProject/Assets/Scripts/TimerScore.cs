@@ -1,5 +1,5 @@
 using UnityEngine;
-using TMPro;  // TextMeshPro‚ÌŽg—p
+using TMPro;
 
 public class TimerScore : MonoBehaviour
 {

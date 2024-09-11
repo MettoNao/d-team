@@ -1,6 +1,6 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;  // シーン管理に必要
-using TMPro;  // TextMeshProに必要
+using UnityEngine.SceneManagement;
+using TMPro;
 
 public class RetryButton : MonoBehaviour
 {
