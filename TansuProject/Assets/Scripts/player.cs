@@ -6,6 +6,7 @@ public class player : MonoBehaviour
     [SerializeField] float speed;
     [SerializeField] float jumpPower;
     [SerializeField] float xLimit;
+    [SerializeField] private ResultDisplayScore resultDisplayScore;
     private bool jumpTF = true;
     public int health;
     private Rigidbody rb;
@@ -56,6 +57,12 @@ public class player : MonoBehaviour
             {
                 jumpTF = false;
             }
+        }
+
+
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            resultDisplayScore.ShowResult();
         }
     }
 

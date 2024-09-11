@@ -11,11 +11,15 @@ public class Fade : MonoBehaviour
     [SerializeField] float fadeDuration = 1f;
     //[SerializeField] float displayImageDuration = 1f;
     [SerializeField] CanvasGroup canvasGroup;
+    [SerializeField] private bool isStartFade;
 
     float timer;
-    void Start()
+    void OnEnable()
     {
-        fadeIn = true;
+        if (isStartFade)
+        {
+            fadeIn = true;
+        }
     }
 
     void Update()

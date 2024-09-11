@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
 
 public class ResultDisplayScore : MonoBehaviour
@@ -16,6 +15,11 @@ public class ResultDisplayScore : MonoBehaviour
             int finalScore = timerScore.GetScore();
             DisplayScore(finalScore);
         }
+    }
+
+    public void ShowResult()
+    {
+        gameObject.SetActive(true);
     }
 
     // スコアをリザルト画面のテキストに表示する

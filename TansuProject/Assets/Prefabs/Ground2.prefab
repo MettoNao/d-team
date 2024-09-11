@@ -447,7 +447,7 @@ GameObject:
   - component: {fileID: 2116561112683718272}
   m_Layer: 0
   m_Name: Lego
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -804,7 +804,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 914a18a71bb484c57abfe7c996df5d90, type: 2}
+  - {fileID: 2100000, guid: 2a38e7f97b44e4c4cb7b6975a15e41bc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
