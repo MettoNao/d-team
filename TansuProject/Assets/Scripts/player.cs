@@ -8,6 +8,7 @@ public class player : MonoBehaviour
     [SerializeField] float xLimit;
     [SerializeField] private ResultDisplayScore resultDisplayScore;
     [SerializeField] private GameObject effect;
+    [SerializeField] private AudioSource audioSource;
     private bool jumpTF = true;
     public int health;
     private Rigidbody rb;
@@ -62,6 +63,7 @@ public class player : MonoBehaviour
 
         if (other.gameObject.CompareTag("Enemy"))
         {
+            audioSource.Play();
             var e = Instantiate(effect);
             e.transform.position = transform.position;
 
